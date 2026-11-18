@@ -1,0 +1,16 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Uploads
+bukti_pembayaran/*
+!bukti_pembayaran/.gitkeep
+
+# Local database backups
+database/db_*.sql
+
+# Dependencies, logs, and build artifacts
+/vendor/
+*.log
+.render/

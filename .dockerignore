@@ -1,0 +1,8 @@
+.git
+.env
+.render
+vendor
+*.log
+database/db_*.sql
+bukti_pembayaran/*
+!bukti_pembayaran/.gitkeep

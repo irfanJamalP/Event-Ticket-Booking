@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.top {
+    background-color: #e96b32;
+    color: #fff;
+}
+.judul {
+    font-size: 12pt;
+    padding: 10px;
+    font-weight: bold;
+}
+.link {
+    margin-top: 20px;
+}
+
+.badge-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+.badge-success {
+    background-color: #28a745;
+    color: #fff;
+}
+.badge-info {
+    background-color: #17a2b8;
+    color: #fff;
+}
+.badge-warning {
+    background-color: #ffc107;
+    color: #000;
+}
