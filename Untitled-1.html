@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket Booking</title>
+    <style>
+        /* Umum */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #2c3e50;
+            text-align: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #1abc9c;
+            border-radius: 4px;
+        }
+
+        /* Efek kursor */
+        a:hover, button:hover {
+            cursor: url('https://cdn.custom-cursor.com/db/main/230x230/4988/click2-pointer-click-custom-cursor.png'), auto;
+        }
+
+        /* Section Style */
+        section {
+            padding: 60px 20px;
+            background-color: #fff;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        #home {
+            background: url('concert-bg.jpg') no-repeat center center/cover;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #events, #order, #schedule, #about {
+            background-color: #fff;
+            color: #333;
+        }
+
+        #events table, #schedule ul {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        #events table th, #events table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        #events table th {
+            background-color: #1abc9c;
+            color: white;
+        }
+
+        #schedule ul li {
+            padding: 10px 0;
+        }
+
+        #order form {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        form input[type="text"], form input[type="email"], form input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #1abc9c;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #16a085;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Hover efek elegan untuk gambar */
+        img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <header>
+        <h1>Welcome to Event Ticket Booking</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Event List</a></li>
+                <li><a href="#order">Order Ticket</a></li>
+                <li><a href="#schedule">Event Schedule</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h2>Home</h2>
+        <p>Your one-stop platform for booking tickets to the hottest events in town!</p>
+        <img src="concert.jpg" alt="Concert Event" width="500">
+    </section>
+
+    <!-- Event List Section -->
+    <section id="events">
+        <h2>Upcoming Events</h2>
+        <table border="1">
+            <tr>
+                <th>Event Name</th>
+                <th>Location</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>Music Fest 2024</td>
+                <td>Jakarta</td>
+                <td>20th October 2024</td>
+            </tr>
+            <tr>
+                <td>Food Carnival</td>
+                <td>Bandung</td>
+                <td>10th November 2024</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Order Ticket Section -->
+    <section id="order">
+        <h2>Order Your Tickets</h2>
+        <form action="submit.html" method="post">
+            <label for="event">Event:</label><br>
+            <input type="text" id="event" name="event"><br><br>
+
+            <label for="quantity">Number of Tickets:</label><br>
+            <input type="number" id="quantity" name="quantity"><br><br>
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- Event Schedule Section -->
+    <section id="schedule">
+        <h2>Event Schedule</h2>
+        <ul>
+            <li>20th October 2024 - Music Fest 2024, Jakarta</li>
+            <li>10th November 2024 - Food Carnival, Bandung</li>
+        </ul>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <ul>
+            <li>Nama Anggota 1</li>
+            <li>Nama Anggota 2</li>
+            <li>Nama Anggota 3</li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Event Ticket Booking</p>
+    </footer>
+</body>
+</html>
